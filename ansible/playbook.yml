@@ -1,0 +1,31 @@
+---
+- name: Deploy DevOps Lab Infrastructure
+  hosts: webservers
+  become: true
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        force_apt_get: yes
+
+    - name: Install required system packages
+      apt:
+        pkg:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+          - python3-pip
+          - git
+        state: latest
+
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: latest
+
+    - name: Ensure Docker is running
+      systemd:
+        name: docker
+        state: started
+        enabled: yes
