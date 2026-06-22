@@ -1,4 +1,4 @@
-# Enterprise DevOps Infrastructure Lab 🚀
+# Enterprise DevOps Infrastructure Lab 
 
 Проект представляет собой отказоустойчивую корпоративную инфраструктуру для веб-платформы **NexusCorp**, развернутую с использованием лучших практик методологии DevOps.
 
@@ -11,7 +11,7 @@
 * **CI/CD:** GitHub Actions
 * **Monitoring:** Prometheus & Grafana
 
-## 🚀 Архитектура и запуск проекта локально
+## Архитектура и запуск проекта локально
 
 Выполните команду в корневом каталоге:
 ```bash
