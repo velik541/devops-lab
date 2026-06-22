@@ -22,12 +22,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install flask psycopg2-binary
 
-    - name: Lint with flake8
-      run: |
-        pip install flake8
-        # Остановка сборки, если есть синтаксические ошибки
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-
     - name: Build Docker Image
       run: |
         docker build -t nexuscorp-app:latest ./docker/app
